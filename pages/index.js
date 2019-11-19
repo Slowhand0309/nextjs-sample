@@ -1,17 +1,20 @@
-export default () => (
-  <div className="hello">
-    <p>Hello World</p>
-    <style jsx>{`
-      .hello {
-        font: 15px Helvetica, Arial, sans-serif;
-        background: #eee;
-        padding: 100px;
-        text-align: center;
-        transition: 100ms ease-in background;
-      }
-      .hello:hover {
-        background: #ccc;
-      }
-    `}</style>
-  </div>
-)
+import Link from 'next/link'
+
+function Home() {
+  return (
+    <>
+      <ul>
+        <li>Home</li>
+        <li>
+          <Link href="/about">
+            <a>About Us</a>
+          </Link>
+        </li>
+      </ul>
+
+      <h1>This is our homepage.</h1>
+    </>
+  )
+}
+
+export default Home
